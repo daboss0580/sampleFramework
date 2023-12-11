@@ -3,14 +3,14 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
-import utils.CommonMethods;
-import utils.ConfigReader;
-import utils.Log;
+import utilities.CommonMethods;
+import utilities.ConfigReader;
 
 public class LoginSteps extends CommonMethods {
-
+    public static Logger log = LogManager.getLogger(LoginSteps.class);
 
     @Given("user is navigated to HRMS application")
     public void user_is_navigated_to_hrms_application() {
@@ -19,12 +19,11 @@ public class LoginSteps extends CommonMethods {
 
     @When("user enters valid admin username and password")
     public void user_enters_valid_admin_username_and_password() {
-        DOMConfigurator.configure("log4j.xml");
-        Log.startTestCase("My batch 16 test case starts here");
+        log.info("My batch 16 test case starts here");
         sendText(ConfigReader.getPropertyValue("username"), loginPage.usernameField);
-        Log.info("my username has been entered");
+        log.info("my username has been entered");
         sendText(ConfigReader.getPropertyValue("password"), loginPage.passwordField);
-        Log.info("My password has been entered");
+        log.info("My password has been entered");
     }
 
     @When("user clicks on login button")

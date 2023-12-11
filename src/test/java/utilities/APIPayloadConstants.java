@@ -1,4 +1,4 @@
-package utils;
+package utilities;
 
 import org.json.JSONObject;
 

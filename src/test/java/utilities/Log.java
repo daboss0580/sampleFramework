@@ -1,11 +1,11 @@
-package utils;
+package utilities;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 public class Log {
 
 
-    private static Logger Log = Logger.getLogger(Log.class.getName());
+   /* private static Logger Log = Logger.getLogger(Log.class.getName());
 
 
     public static void startTestCase(String sTestCaseName){
@@ -66,5 +66,5 @@ public class Log {
 
         Log.debug(message);
 
-    }
+    }*/
 }

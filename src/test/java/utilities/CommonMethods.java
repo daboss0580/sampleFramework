@@ -1,4 +1,4 @@
-package utils;
+package utilities;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -27,7 +27,9 @@ public class CommonMethods extends PageInitializer {
         switch (ConfigReader.getPropertyValue("browser")) {
             case "chrome":
                 ChromeOptions cp = new ChromeOptions();
-                cp.setHeadless(false);
+                if ((true)) {
+                    cp.addArguments("headless");
+                }
                 driver = new ChromeDriver(cp);
                 break;
             case "firefox":
