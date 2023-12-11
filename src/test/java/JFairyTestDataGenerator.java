@@ -16,7 +16,6 @@ public class JFairyTestDataGenerator {
         System.out.println(address);
         System.out.println(email);
         System.out.println(phoneNumber);
-        System.out.println(passportNumber);
 
     }
 }
